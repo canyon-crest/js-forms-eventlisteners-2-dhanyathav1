@@ -119,8 +119,9 @@ calcBtn.addEventListener('click', function() {
 //         e) Set the output paragraph innerHTML to ""
 let clear = document.getElementById("clearBtn");
 clear.addEventListener('click', function () {
-    name.value = "";
+    document.getElementById("myInput").value = "";
     document.getElementById("r3").checked = true;
+    let toppings = document.getElementsByName("cb");
     for (let i = 0; i < toppings.length; i++) {
         if (toppings[i].checked) {
             toppings[i].checked = false;
