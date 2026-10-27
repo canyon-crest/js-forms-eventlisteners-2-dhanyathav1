@@ -48,17 +48,15 @@ let calcBtn = document.getElementById("btnCalc");
 let size;
 let count = 0;
 let fee = 0;
-let radio;
-let toppings;
+let radio = document.getElementsByName("rg");;
+let toppings = document.getElementsByName("cb");;
 let name;
 calcBtn.addEventListener('click', function() {
-    radio = document.getElementsByName("rg");
     for (let i = 0; i < radio.length; i++) {
         if (radio[i].checked) {
             size = parseFloat(radio[i].value);
         }
     }
-    toppings = document.getElementsByName("cb");
     for (let i = 0; i < toppings.length; i++) {
         if (toppings[i].checked) {
             count = count + 1;
