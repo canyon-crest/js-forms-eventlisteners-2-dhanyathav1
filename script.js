@@ -65,9 +65,9 @@ calcBtn.addEventListener('click', function() {
         }
     }
     count = count * 0.5;
-    if (document.getElementById("serviceSelect") === "dinein") {
+    if (document.getElementById("serviceSelect").value === "dinein") {
         fee = 0;
-    } else if (document.getElementById("serviceSelect") === "takeout") {
+    } else if (document.getElementById("serviceSelect").value === "takeout") {
         fee = 1.5;
     } else {
         fee = 3.00;
@@ -121,7 +121,7 @@ calcBtn.addEventListener('click', function() {
 //         e) Set the output paragraph innerHTML to ""
 let clear = document.getElementById("clearBtn");
 clear.addEventListener('click', function () {
-    name = "";
+    name.value = "";
     document.getElementById("r3").checked = true;
     for (let i = 0; i < toppings.length; i++) {
         if (toppings[i].checked) {
